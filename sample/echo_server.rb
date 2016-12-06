@@ -1,7 +1,5 @@
 require 'eventmachine'
 require 'websocket-eventmachine-server'
-require 'hue'
-require 'sonos'
 
 PORT = (ARGV.shift || 8080).to_i
 
