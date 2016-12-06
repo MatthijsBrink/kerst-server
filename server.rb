@@ -8,7 +8,7 @@ EM::run do
 
   puts "start websocket server - port:#{PORT}"
 
-  WebSocket::EventMachine::Server.start(host: '0.0.0.0') do |ws|
+  WebSocket::EventMachine::Server.start(host: '0.0.0.0',  port: PORT) do |ws|
     ws.onopen do
       sid = @channel.subscribe do |mes|
         ws.send mes
