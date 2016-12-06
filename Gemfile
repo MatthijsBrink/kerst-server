@@ -5,3 +5,5 @@ gemspec
 
 gem 'eventmachine'
 gem 'websocket-eventmachine-server'
+
+ruby '2.3.1'
