@@ -1,7 +1,7 @@
 require 'eventmachine'
 require 'websocket-eventmachine-server'
 
-PORT = (ARGV.shift || 8080).to_i
+PORT = (ARGV.shift || 8000).to_i
 
 EM::run do
   @channel = EM::Channel.new
