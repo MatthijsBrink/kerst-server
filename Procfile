@@ -1,1 +1,1 @@
-socket: ruby sample/echo_server.rb
+web: ruby sample/echo_server.rb
