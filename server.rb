@@ -8,7 +8,7 @@ EM::run do
 
   puts "start websocket server - port:#{PORT}"
 
-  WebSocket::EventMachine::Server.start(host: 'kerst-server.herokuapp.com',  port: PORT) do |ws|
+  WebSocket::EventMachine::Server.start(host: 'ws://kerst-server.herokuapp.com',  port: PORT) do |ws|
     ws.onopen do
       sid = @channel.subscribe do |mes|
         ws.send mes
