@@ -18,13 +18,9 @@ EM::run do
       @channel.push "hello new client <#{sid}>"
 
       ws.onmessage do |msg|
-        puts "<#{sid}> #{msg}"
       end
 
       ws.onclose do
-        puts "<#{sid}> disconnected"
-        @channel.unsubscribe sid
-        @channel.push "<#{sid}> disconnected"
       end
     end
   end
